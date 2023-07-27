@@ -5,40 +5,53 @@
 }
 
 .main {
-  background-color: #14c38e;
   width: 100%;
+  min-height: 470px;
+  height: 100vh;
   color: #ffffff;
 }
 
 .main-top {
-  height: 50vh;
+  background-color: #14c38e;
+  padding: 10px;
+  height: 60%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding-top: 70px;
 }
 
 .main-end {
-  height: 50vh;
-  background-color: #f3f3ee;
+  padding: 5%;
+  height: 40%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  background-color: #f3f3ee;
 }
 
 .main-top-count-button {
-  position: relative;
-  top: 45px;
   font-size: 50px;
+  font-weight: 900;
   text-decoration: none;
   padding: 20px 35px;
-  border-radius: 50%;
+  margin: 10px 20px;
+  border-radius: 100%;
   background-color: #00ffab;
   color: #ffffff;
-  -webkit-box-shadow: 6px 10px 5px 0px rgba(20, 195, 142, 1);
-  -moz-box-shadow: 6px 10px 5px 0px rgba(20, 195, 142, 1);
-  box-shadow: 6px 10px 5px 0px rgba(20, 195, 142, 1);
+  box-shadow: 0px 0px 100px 35px rgba(6, 157, 112, 0.8);
+  -webkit-box-shadow: 0px 0px 100px 35px rgba(6, 157, 112, 0.8);
+  -moz-box-shadow: 0px 0px 100px 35px rgba(6, 157, 112, 0.8);
+  align-self: flex-end;
+  z-index: 500;
+}
+
+.main-top-count-button:active {
+  z-index: 0;
+  box-shadow: 0px 0px 100px 20px rgba(6, 157, 112, 0.8);
+  -webkit-box-shadow: 0px 0px 100px 20px rgba(6, 157, 112, 0.8);
+  -moz-box-shadow: 0px 0px 100px 20px rgba(6, 157, 112, 0.8);
+  align-self: flex-end;
 }
 
 .main-top-counter {
@@ -46,6 +59,8 @@
 }
 
 .main-end-button {
+  width: 220px;
+  text-align: center;
   background-color: #ffffff;
   color: #14c38e;
   display: inline-block;
@@ -55,4 +70,21 @@
   -webkit-box-shadow: 12px 10px 5px 0px rgba(232, 231, 222, 1);
   -moz-box-shadow: 12px 10px 5px 0px rgba(232, 231, 222, 1);
   box-shadow: 12px 10px 5px 0px rgba(232, 231, 222, 1);
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    height: max-content;
+  }
+
+  .main-end {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 511px) {
+  .main-top {
+    padding-bottom: 80px;
+  }
 }
